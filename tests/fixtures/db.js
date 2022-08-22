@@ -33,9 +33,8 @@ const userTwo = {
 
 const contestOne = {
   _id: new mongoose.Types.ObjectId(),
-  title: 'Codeforces Round 123',
+  name: 'Codeforces Round 123',
   url: 'http://localhost:3000/',
-  done: false,
   solve: ['800', '1300'],
   upsolve: ['1700'],
   note: 'Build solution from smaller observation',
@@ -44,7 +43,7 @@ const contestOne = {
 
 const contestTwo = {
   _id: new mongoose.Types.ObjectId(),
-  title: 'Codechef contest 123',
+  name: 'Codechef contest 123',
   url: 'http://localhost:3000/',
   solve: ['1400', '1800', '2200'],
   upsolve: ['2500', '2700'],
@@ -54,9 +53,8 @@ const contestTwo = {
 
 const contestThree = {
   _id: new mongoose.Types.ObjectId(),
-  title: 'AtCoder Beginner Contest 123',
+  name: 'AtCoder Beginner Contest 123',
   url: 'http://localhost:3000/',
-  done: true,
   solve: ['100', '200', '300', '400'],
   upsolve: [],
   owner: userTwo._id,

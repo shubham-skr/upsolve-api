@@ -19,7 +19,7 @@ test('Should create contest for user', async () => {
     .post('/contest')
     .set('Authorization', `Bearer ${userOne.tokens[0].token}`)
     .send({
-      title: 'New Contest',
+      name: 'New Contest',
       url: 'http://localhost:3000/',
       solve: ['100'],
       upsolve: ['200'],
@@ -47,12 +47,12 @@ test('Should update user contest', async () => {
     .patch(`/contest/${contestOne._id}`)
     .set('Authorization', `Bearer ${userOne.tokens[0].token}`)
     .send({
-      done: 'true',
+      note: 'An updated note',
     })
     .expect(200);
 
   const contest = await Contest.findById(contestOne._id);
-  expect(contest.done).toBe(true);
+  expect(contest.note).toBe('An updated note');
 });
 
 test('Should delete authenticated user contest', async () => {

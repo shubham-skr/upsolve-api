@@ -9,6 +9,11 @@ router.post('/contest', auth, async (req, res) => {
     owner: req.user._id,
   });
 
+  if (contest.solve.length === 0)
+    contest.done = 'true';
+  else 
+    contest.done = 'false';
+
   try {
     await contest.save();
     res.status(201).send(contest);
@@ -66,7 +71,7 @@ router.get('/contest/:id', auth, async (req, res) => {
 
 router.patch('/contest/:id', auth, async (req, res) => {
   const updates = Object.keys(req.body);
-  const allowedUpdate = ['title', 'url', 'done', 'solve', 'upsolve', 'note'];
+  const allowedUpdate = ['name', 'url', 'solve', 'upsolve', 'note'];
   const isValidOperation = updates.every((update) =>
     allowedUpdate.includes(update)
   );
@@ -86,6 +91,11 @@ router.patch('/contest/:id', auth, async (req, res) => {
     }
 
     updates.forEach((update) => (contest[update] = req.body[update]));
+    if (contest.solve.length === 0)
+      contest.done = 'true';
+    else 
+      contest.done = 'false';
+    
     console.log(req.body);
     await contest.save();
 
