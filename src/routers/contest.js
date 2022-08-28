@@ -9,7 +9,7 @@ router.post('/contest', auth, async (req, res) => {
     owner: req.user._id,
   });
 
-  if (contest.solve.length === 0)
+  if (contest.upsolve.length === 0)
     contest.done = 'true';
   else 
     contest.done = 'false';
@@ -91,7 +91,7 @@ router.patch('/contest/:id', auth, async (req, res) => {
     }
 
     updates.forEach((update) => (contest[update] = req.body[update]));
-    if (contest.solve.length === 0)
+    if (contest.upsolve.length === 0)
       contest.done = 'true';
     else 
       contest.done = 'false';
