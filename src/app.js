@@ -5,16 +5,13 @@ const User = require('./models/user');
 const Contest = require('./models/contest');
 const userRouter = require('./routers/user');
 const contestRouter = require('./routers/contest');
+const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use(userRouter);
 app.use(contestRouter);
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-})
 
 module.exports = app;
