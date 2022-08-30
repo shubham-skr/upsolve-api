@@ -2,7 +2,7 @@
 REST API to manage contests for upsolving
 <br />
 
-### <a href="https://the-upsolver.netlify.app/">LIVE APP</a>
+### <a href="https://the-upsolver-8b63b.web.app/">LIVE APP</a>
 ### <a href="https://github.com/shubham-skr/the-upsolver">Frontend Github Repository</a>
 
 <br />
