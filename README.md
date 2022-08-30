@@ -7,6 +7,14 @@ REST API to manage contests for upsolving
 
 <br />
 
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/79463685/187495676-150e4f80-fa75-4378-a8ec-876086548b5c.png">
+
+<br />
+
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/79463685/187495409-7b3dd5f7-9c22-4b5c-a8d0-7cef755006a4.png">
+
+<br />
+
 #### Features Implemented in API: 
 1. Authentication and Authorization 
 2. Sorting
