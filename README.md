@@ -1,9 +1,13 @@
 # upsolve-api
 REST API to manage contests for upsolving
+<br />
 
-<br /> 
+### <a href="https://the-upsolver.netlify.app/">LIVE APP</a>
+### <a href="https://github.com/shubham-skr/the-upsolver">Frontend Github Repository</a>
 
-#### Features Implemented: 
+<br />
+
+#### Features Implemented in API: 
 1. Authentication and Authorization 
 2. Sorting
 3. Pagination
