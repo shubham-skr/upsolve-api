@@ -1,10 +1,9 @@
 # upsolve-api
 REST API to manage contests for upsolving
 
-<br />
 <br /> 
 
-### #Features Implemented: 
+#### Features Implemented: 
 1. Authentication and Authorization 
 2. Sorting
 3. Pagination
